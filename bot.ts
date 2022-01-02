@@ -5,7 +5,7 @@ import { Responses } from "./strings/responses.ts";
 
 let counter = 419;
 
-const bot = new Bot(config().TG_TOKEN);
+export const bot = new Bot(config().TG_TOKEN);
 
 const startMenu = new Keyboard()
   .text(Questions.doYouLove);
