@@ -7,12 +7,12 @@ let counter = 419;
 export const bot = new Bot(Deno.env.toObject().TG_TOKEN);
 
 const startMenu = new Keyboard()
-  .text(Questions.doYouLove);
+  .text(Questions.doYouLove).row();
 
 const menu = new Keyboard()
-  .text(Questions.doYouLove).text(Questions.chestno).text(
+  .text(Questions.doYouLove).row().text(Questions.chestno).row().text(
     Questions.howStrong1to10,
-  );
+  ).row();
 
 bot.command(
   "start",
