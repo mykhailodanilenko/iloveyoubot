@@ -1,11 +1,10 @@
 import { Bot, Keyboard } from "https://deno.land/x/grammy/mod.ts";
-import { config } from "https://deno.land/x/dotenv/mod.ts";
 import { Questions } from "./strings/questions.ts";
 import { Responses } from "./strings/responses.ts";
 
 let counter = 419;
 
-export const bot = new Bot(config().TG_TOKEN);
+export const bot = new Bot(Deno.env.toObject().TG_TOKEN);
 
 const startMenu = new Keyboard()
   .text(Questions.doYouLove);
